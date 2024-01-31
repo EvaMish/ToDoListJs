@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": "06a1",
+      "text": "mn",
+      "date": "2024-01-26",
+      "checked": ""
+    },
+    {
+      "id": "4b47",
+      "text": "mm",
+      "date": "",
+      "checked": "checked"
+    }
+  ]
+}
