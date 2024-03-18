@@ -1,3 +1,4 @@
+
 // созхдать крестик 
 (async function(){
   const data = await fetch("http://localhost:3000/posts")
@@ -144,4 +145,25 @@ async function newElement() {
   }
 }
 
+//изменение цвета в зависимости от времени суток
+function updateTimeOfDay() {
+  const section = document.getElementById('timeOfDaySection');
+  const currentTime = new Date().getHours();
 
+  let backgroundColor;
+  if (currentTime >= 5 && currentTime < 9) {
+    backgroundColor = '#1773fc';
+  } else if (currentTime >= 9 && currentTime < 12) {
+    backgroundColor = '#5f9fff';
+  } else if (currentTime >= 12 && currentTime < 17) {
+    backgroundColor = '#fdff6d';
+  } else if (currentTime >= 17 && currentTime < 21) {
+    backgroundColor = '#ff5733';
+  } else {
+    backgroundColor = '#1a1a1a';
+  }
+
+  section.style.background = backgroundColor;
+}
+
+setInterval(updateTimeOfDay, 2000, "r"); 
